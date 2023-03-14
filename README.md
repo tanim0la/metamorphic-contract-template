@@ -67,7 +67,7 @@ Call `destroy(address)` function passing the morph contract address as argument.
 
 ### Change runtime code and deploy to same address
 
-We have a new runtime code we want to assign to our previous morph address. Firstly, we update `impletation` variable by calling function `changeImpl(bytes memory)` passing the new runtime code as argument, then we call `deploy(uint256)` function passing the same `_salt` that was used to create the previous morph contract.
+We have a new runtime code we want to assign to our previous morph address. Firstly, we update `implementation` variable by calling function `changeImpl(bytes memory)` passing the new runtime code as argument, then we call `deploy(uint256)` function passing the same `_salt` that was used to create the previous morph contract.
 
 ```solidity
    function changeImpl(bytes memory impl) external {
@@ -75,3 +75,6 @@ We have a new runtime code we want to assign to our previous morph address. Firs
    }
 ```
 
+You have successfully created a metamorphic contract :)
+
+Play around with the code on [remix](https://remix.ethereum.org/#url=https://github.com/tanim0la/metamorphic-contract-template/blob/main/MorphFactory.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.19+commit.7dd6d404.js&lang=en)
